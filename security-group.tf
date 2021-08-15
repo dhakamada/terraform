@@ -1,7 +1,6 @@
-// estando no mesmo arquivo ele já faz a referencia pelo .tf
-resource "aws_security_group" "acesso-ssh" {
-  name        = "acesso-ssh"
-  description = "acesso-ssh"
+resource "aws_security_group" "access-ssh" {
+  name        = "access-ssh"
+  description = "access-ssh"
 
   ingress = [
     {
@@ -9,7 +8,7 @@ resource "aws_security_group" "acesso-ssh" {
       from_port        = 22
       to_port          = 22
       protocol         = "tcp"
-      cidr_blocks      = var.cdirs_acesso_remoto
+      cidr_blocks      = var.cdirs_access_remoto
       ipv6_cidr_blocks = []
       prefix_list_ids  = []
       security_groups  = []
@@ -22,10 +21,10 @@ resource "aws_security_group" "acesso-ssh" {
   }
 }
 
-resource "aws_security_group" "acesso-ssh-us-east-2" {
+resource "aws_security_group" "access-ssh-us-east-2" {
   provider    = aws.us-east-2
-  name        = "acesso-ssh"
-  description = "acesso-ssh"
+  name        = "access-ssh"
+  description = "access-ssh"
 
   ingress = [
     {
@@ -33,7 +32,7 @@ resource "aws_security_group" "acesso-ssh-us-east-2" {
       from_port        = 22
       to_port          = 22
       protocol         = "tcp"
-      cidr_blocks      = var.cdirs_acesso_remoto
+      cidr_blocks      = var.cdirs_access_remoto
       ipv6_cidr_blocks = []
       prefix_list_ids  = []
       security_groups  = []

@@ -1,7 +1,6 @@
 ## Terraform
 
-The sequency of commands to make deploy
-Sequencia de comandos para fazer o deploy
+The sequency of commands to make a deploy
 - init - download dependencies
 - plan - validate how the infra will be configured
 - apply - deploy and provider resources

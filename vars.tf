@@ -7,12 +7,12 @@ variable "amis" {
   }
 }
 
-variable "cdirs_acesso_remoto" {
+variable "cdirs_access_remoto" {
   type    = list(string)
   default = ["179.209.97.254/32"]
 }
 
 variable "key_name" {
-  type    = string //default is string
+  type    = string // it's not necessary, because the default type is string
   default = "terraform-aws"
 }

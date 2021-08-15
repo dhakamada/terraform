@@ -1,10 +1,8 @@
-resource "aws_s3_bucket" "dev3" {
+resource "aws_s3_bucket" "hakamada" {
   bucket = "hakamada-bucket"
   acl    = "private"
 
   tags = {
-    Name = "hakamada-dev3"
+    Name = "hakamada"
   }
 }
-
-// bucket é multi regional
